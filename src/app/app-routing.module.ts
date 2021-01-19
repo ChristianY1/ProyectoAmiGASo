@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'eliminar',
     loadChildren: () => import('./eliminar/eliminar.module').then( m => m.EliminarPageModule)
+  },  {
+    path: 'servicios',
+    loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
   }
+
 ];
 
 @NgModule({
