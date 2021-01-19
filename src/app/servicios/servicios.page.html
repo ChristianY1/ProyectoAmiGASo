@@ -8,11 +8,12 @@
     <ion-item-sliding class="post" *ngFor="let post of arrayPosts | async">
       <ion-item >
         <ion-avatar slot="start">
-          <img src="./avatar-finn.png">
+         
         </ion-avatar>
         <ion-label (click)="editarUsuarioById(contacto.uid)">
           <h2>{{post.title}}</h2>
-          <h3>{{post.body}}</h3>
+          <img src={{post.thumbnailUrl}}>
+          
         </ion-label>
       </ion-item>
       

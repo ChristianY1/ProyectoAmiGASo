@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostServiceService {
 
-  url = 'https://jsonplaceholder.typicode.com/posts';
+  url = 'https://jsonplaceholder.typicode.com/photos';
 
   constructor(public http: HttpClient) {
 
