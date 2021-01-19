@@ -14,6 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth'; 
 import { AngularFireDatabaseModule } from '@angular/fire/database'; 
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -29,7 +30,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-
+    HttpClientModule,//Lo agregamos aqui también
 
 
   ],
@@ -37,6 +38,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    
   ],
   bootstrap: [AppComponent]
 })

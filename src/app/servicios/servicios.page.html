@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>servicios</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header>
+      Pedidos Servicios Web  
+    </ion-list-header>
+
+    <ion-item-sliding class="post" *ngFor="let post of arrayPosts | async">
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="./avatar-finn.png">
+        </ion-avatar>
+        <ion-label (click)="editarUsuarioById(contacto.uid)">
+          <h2>{{post.title}}</h2>
+          <h3>{{post.body}}</h3>
+        </ion-label>
+      </ion-item>
+      
+    </ion-item-sliding>
+
+
+
+
+
+    </ion-list>
+
 
 </ion-content>
