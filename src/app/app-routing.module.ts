@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/ubi/ubi.module').then( m => m.UbiPageModule)
   },
   {
     path: 'listar',
@@ -22,9 +22,14 @@ const routes: Routes = [
   {
     path: 'eliminar',
     loadChildren: () => import('./eliminar/eliminar.module').then( m => m.EliminarPageModule)
-  },  {
+  },
+  {
     path: 'servicios',
     loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
+  },
+  {
+    path: 'ubi',
+    loadChildren: () => import('./pages/ubi/ubi.module').then( m => m.UbiPageModule)
   }
 
 ];

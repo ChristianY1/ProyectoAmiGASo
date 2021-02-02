@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ubi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- the component as the initial center of the map: -->
+  <agm-map [latitude]='lat' [longitude]='lng' (centerChange)="newAddress($event)">
+
+    <agm-marker [latitude]="currentLocation.latitude" [longitude]="currentLocation.longitude" [iconUrl]="icons.client"
+      [markerDraggable]="false">
+      <agm-info-window><strong>Mi posición</strong></agm-info-window>
+    </agm-marker>
+
+    <agm-marker [latitude]="centerLocation.latitude" [longitude]="centerLocation.longitude" [iconUrl]="icons.store"
+      >
+      <agm-info-window><strong>{{centerLocation.address}}</strong></agm-info-window>
+    </agm-marker>
+    <ion-item-sliding *ngFor="let ubicacion of ubicaciones | async">
+
+
+      <agm-marker [latitude]="ubicacion.latitude" [longitude]="ubicacion.longitude" [iconUrl]="icons.pointer" >
+      </agm-marker>
+
+    </ion-item-sliding>
+
+
+
+  </agm-map>
+  <ion-item>
+    <ion-button color="dark" (click)="guardar()">Enviar</ion-button>
+  </ion-item>
+
+  {{centerLocation | json}}
+
+
+
+</ion-content>
