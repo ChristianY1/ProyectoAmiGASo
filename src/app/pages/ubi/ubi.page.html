@@ -21,7 +21,7 @@
     <ion-item-sliding *ngFor="let ubicacion of ubicaciones | async">
 
 
-      <agm-marker [latitude]="ubicacion.latitude" [longitude]="ubicacion.longitude" [iconUrl]="icons.pointer" >
+      <agm-marker [latitude]="ubicacion.latitude" [longitude]="ubicacion.longitude" [iconUrl]="icons.shop" >
       </agm-marker>
 
     </ion-item-sliding>
@@ -30,7 +30,7 @@
 
   </agm-map>
   <ion-item>
-    <ion-button color="dark" (click)="guardar()">Enviar</ion-button>
+    <ion-button color="primary" (click)="guardar()">Guardar Ubicacion</ion-button>
   </ion-item>
 
   {{centerLocation | json}}

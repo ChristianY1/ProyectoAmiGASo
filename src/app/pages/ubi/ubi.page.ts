@@ -75,6 +75,9 @@ export class UbiPage implements OnInit {
 
   guardar(){
     this.locationService.saveUbi(this.centerLocation)
+    
+   
+
 
   }
 }
